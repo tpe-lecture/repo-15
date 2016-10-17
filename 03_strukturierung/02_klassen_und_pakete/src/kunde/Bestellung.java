@@ -1,3 +1,5 @@
+package kunde;
+
 /**
  * Eine Bestellung.
  */

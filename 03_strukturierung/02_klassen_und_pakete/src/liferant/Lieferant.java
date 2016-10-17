@@ -1,4 +1,5 @@
-
+package liferant;
+import kunde.Adresse;
 
 /**
  * Lieferant.

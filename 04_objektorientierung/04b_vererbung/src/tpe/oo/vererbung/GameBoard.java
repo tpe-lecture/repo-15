@@ -13,7 +13,7 @@ import de.smits_net.games.framework.sprite.Sprite;
 /**
  * Spielfeld.
  */
-public class GameBoard {
+public class GameBoard extends Board{
 // TODO: Von Board ableiten
 
     /** Alien, das durch das Bild läuft. */
@@ -31,13 +31,15 @@ public class GameBoard {
     public GameBoard() {
 // TODO: Einkommentieren
 //        // neues Spielfeld anlegen
-//        super(10, new Dimension(800, 600), Color.BLACK);
+         super(10, new Dimension(800, 600), Color.BLACK);
 //
 //        // Hintergrundbild laden
-//        background = ImageBase.loadImage("assets/background");
+         background = ImageBase.loadImage("assets/background");
 //
 
         // TODO: Alien und Asteroid anlegen und positionieren
+          alien = new AlienSprite(this, new Point(300, 225));
+          asteroid = new Asteroid(this,new Point(310, 350));
     }
 
     /**
@@ -53,6 +55,8 @@ public class GameBoard {
      * @param g Der Grafik-Kontext
      */
     public void drawGame(Graphics g) {
+alien.draw(g);
+asteroid.draw(g);
         // TODO: Alle Objekte zeichnen
     }
 
@@ -63,15 +67,18 @@ public class GameBoard {
      *      zurück gibt
      */
     public boolean updateGame() {
-
+alien.move();
+asteroid.move();
         // TODO: Die Objekte bewegen
 
         // Kollision erkennen
 // TODO: Einkommentieren
-//        if (alien.intersects(asteroid) && alien.isActive()) {
-//            alien.explode();
-//        }
+        if (alien.intersects(asteroid) && alien.isActive()) {
+            alien.explode();
+       }
 
+
+        
         return true;
     }
 }

@@ -1,3 +1,6 @@
+package kunde;
+import liferant.Artikel;
+
 /**
  * Eine Position der Bestellung.
  */

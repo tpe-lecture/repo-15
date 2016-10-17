@@ -1,4 +1,4 @@
-
+package liferant;
 
 /**
  * Ein Artikel aus dem Angebot der Firma.

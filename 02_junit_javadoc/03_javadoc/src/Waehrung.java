@@ -1,12 +1,22 @@
-// TODO: JavaDoc
+/**
+ * This class defines an Waehrungs-object witch
+ * represents the kurs and the name aswell the symbol for the currency.
+ *
+ * @author b.collins
+ **/
 public class Waehrung {
-
-    // TODO: JavaDoc
+/*
+ * der Kurs der Waehrung.
+ */
     private final int kurs;
-
+/**
+ * Der Name der Waehrung.
+ **/
     // TODO: JavaDoc
     private final String name;
-
+/**
+ * the kuertzel represents the symbol of
+ */
     // TODO: JavaDoc
     private final String kuerzel;
 
@@ -15,7 +25,6 @@ public class Waehrung {
 
     /**
      * Erzeugt ein neues Objekt.
-     *
      * @param name Name der Währung (z.B. EURO).
      * @param kuerzel Kürzel der Währung (z.B. €).
      * @param kurs Wechselkurs zum Dollar.
@@ -32,10 +41,13 @@ public class Waehrung {
     }
 
     // TODO: JavaDoc
+/**
+ * @return returns Kurs as integer
+ **/
     public int getKurs() {
         return kurs;
     }
-    
+
     // TODO: JavaDoc
     public String getName() {
         return name;
