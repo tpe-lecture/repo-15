@@ -38,7 +38,7 @@ public class GameBoard extends Board{
 //
 
         // TODO: Alien und Asteroid anlegen und positionieren
-          alien = new AlienSprite(this, new Point(300, 225));
+          alien = new AlienSprite(this, new Point(300, 125));
           asteroid = new Asteroid(this,new Point(310, 350));
     }
 
