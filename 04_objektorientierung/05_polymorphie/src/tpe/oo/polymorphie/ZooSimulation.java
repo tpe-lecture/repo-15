@@ -15,28 +15,28 @@ public final class ZooSimulation {
     private ZooSimulation() {
         // keine Objekte benötigt
     }
-    
+
     /**
      * Main-Methode.
-     * 
+     *
      * @param args Kommandozeilen-Argumente.
      */
     public static void main(String[] args) {
         Futterstelle futterstelle = new Futterstelle();
-        ZooTier []tiere =new ZooTier [3];
-        
+        ZooTier[] tiere  = new ZooTier[3];
+
         tiere[0] = new Affe("Charlie");
         tiere[1] = new Gorilla("Buck");
         tiere[2] = new Giraffe("Debbie");
-        for(int i = 0;i<tiere.length;i++){
+        for (int i = 0; i < tiere.length; i++){
             System.out.println(tiere[i]);
         }
-        
+
         System.out.println("Fütterung...");
         futterstelle.gibFutter(tiere);
-        for(int i = 0;i<tiere.length;i++){
+        for(int i = 0; i < tiere.length; i++){
             System.out.println(tiere[i]);
         }
-        
+
     }
 }

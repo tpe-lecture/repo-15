@@ -67,4 +67,7 @@ public class GameBoard extends Board {
         alien5.move();
         return (alien.isVisible()||alien2.isVisible()||alien3.isVisible()||alien4.isVisible()||alien5.isVisible());
     }
+    public void drawGameOver(Graphics g){
+        this.centerText(g, " YOU FUCKED UP THE BUGS");
+    }
 }

@@ -7,19 +7,18 @@ import tpe.oo.polymorphie.tiere.*;
 /**
  * Fütterung der Tiere.
  */
-    public class Futterstelle {
-        public void gibFutter(ZooTier [] tiere){
-            for(int i=0;i<tiere.length;i++){
+public class Futterstelle {
+    /**
+     * fuettert alle ZooTiere die in einem Array uebergeben werden
+     * @param tiere ist ein array mit ZooTieren
+     */
+    public void gibFutter(ZooTier[] tiere)
+    {
+            for(int i = 0; i < tiere.length; i++){
                gibFutter(tiere[i]);
             }
         }
     public void gibFutter(ZooTier tier) {
         tier.fuettern();
     }
-    /**
-     * Füttert den Affen.
-     * 
-     * @param affe Affe, der gefüttert werden soll. 
-     */
-   
 }
