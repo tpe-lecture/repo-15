@@ -6,7 +6,7 @@ import de.smits_net.games.framework.image.AnimatedImage;
 /**
  * Ninja.
  */
-public class Ninja extends Figur {
+private class Ninja extends Figur {
 
     /**
      * Neuer Figur anlegen.

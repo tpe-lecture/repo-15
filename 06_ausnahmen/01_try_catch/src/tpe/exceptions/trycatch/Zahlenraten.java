@@ -40,7 +40,14 @@ public final class Zahlenraten {
 
         while (true) {
             System.out.print("Bitte geben Sie eine Zahl ein: ");
-            int geraten  = Integer.parseInt(readNumber());
+            int geraten;
+            try {
+                geraten = Integer.parseInt(readNumber());
+
+            } catch (NumberFormatException nfe) {
+                System.err.println("WIE GEIL!!!!!!!!!!!!!");
+                continue;
+            }
             versuche++;
 
             if (geraten < zahl) {
@@ -52,6 +59,7 @@ public final class Zahlenraten {
             else {
                 System.out.printf("Richtig in %d Versuchen", versuche);
                 break;
+
             }
         }
     }
