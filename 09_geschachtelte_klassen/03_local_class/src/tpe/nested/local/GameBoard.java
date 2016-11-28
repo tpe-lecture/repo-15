@@ -1,9 +1,12 @@
 package tpe.nested.local;
 
 import java.awt.Color;
+
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Random;
 
 import de.smits_net.games.framework.board.Board;
@@ -22,6 +25,19 @@ public class GameBoard extends Board {
     public GameBoard() {
         // neues Spielfeld anlegen
         super(10, new Dimension(800, 300), Color.BLACK);
+        class AlienExploder extends MouseAdapter {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                Point p = e.getPoint();
+                if(alien.intersects(p)){
+                    alien.explode();
+                }
+
+            }
+        }
+        AlienExploder alienExploder = new AlienExploder();
+        addMouseListener(alienExploder);
+
 
         // Alien initialisieren
         alien = new Alien(this, new Point(800, 50 + new Random().nextInt(100)));
