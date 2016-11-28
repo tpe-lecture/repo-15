@@ -44,7 +44,7 @@ public class GameBoard extends Board {
         super(10, new Dimension(400, 400), Color.BLACK);
 
         // Münzen anlegen
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             // TODO: Neue Münzen auf den Stapel legen
             stack.push(createCoin());
         }
