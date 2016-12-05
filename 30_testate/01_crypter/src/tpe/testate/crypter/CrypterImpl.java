@@ -1,26 +1,19 @@
 package tpe.testate.crypter;
 
 /**
- * Die Klasse implementiert das Interface Crypter. Texte werden mit der
- * speziellen TPE-Verschlüsselung verschlüsselt. Die Verschlüsselung
- * funktioniert so, dass bestimmte Zeichen durch andere ersetzt werden.
- *
- * Hierbei gilt die folgende Übersetzungstabelle:
- *
+ * Die Klasse implementiert das Interface Crypter. Verschlüsselt wird wie folgt:
  * <code> e -> 3 3 -> e l -> 1 1 -> l o -> 0 0 -> o a -> 4 4 -> a t -> 7 7 -> t
  * 
  * @author b.collins
- *
  */
 public class CrypterImpl implements Crypter {
 	private char[] arrayHin = "abcdefghijklmnopqrstuvwxyz0123456789 ".toCharArray();
 	private char[] arrayZurueck = "4bcd3fghijk1mn0pqrs7uvwxyzol2ea56t89 ".toCharArray();
 
 	/**
-	 * Verschlüsselt den gegebenen Text. Enthält die Eingabe Großbuchstaben, so
-	 * werden diese in Kleinbuchstaben umgewandelt. Ungültige Zeichen werden
-	 * ignoriert und nicht in den verschlüsselten Text übernommen.
-	 *
+	 * Verschlüsselt den gegebenen Text.Großbuchstaben werden zu
+	 * Kleinbuchstaben. Ungültige Zeichen werden weggelassen.
+	 * 
 	 * @param input
 	 *            Text, der verschlüsselt werden soll.
 	 * @return Verschlüsselter Text.
