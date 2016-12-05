@@ -1,15 +1,34 @@
 package tpe.collections.iterator;
 
+import java.util.Iterator;
+
 /**
  * Eine einfache, naive Stack Implementierung.
  *
  * @param <T> Typ, der gespeichert werden soll.
  */
-public class SimpleStack<T> {
+public class SimpleStack<T> implements Iterable<T>{
 // TODO: implements Iterable<T> hinzufügen
 
     private T[] stack;
     private int pos;
+
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+
+            int pos = 0;
+
+            public boolean hasNext() {
+                return pos < stack.length;
+            }
+
+            public T next() {
+                pos++;
+                return peek();
+            }
+        };
+    }
+
 
     /**
      * Legt einen neuen Stack mit der gegebenen Größe an.
